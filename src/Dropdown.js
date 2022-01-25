@@ -41,7 +41,7 @@ const Dropdown = ({ state, setState, active, setActive }) => {
           return (
             <div
               onClick={() => {
-                setState({ country_code: item.dial_code });
+                setState({ ...state, country_code: item.dial_code });
                 setCountryCode(item.code);
                 setActive(false);
               }}

@@ -16,7 +16,7 @@ const App = () => {
   const [disable, setDisable] = useState(true);
   const [active, setActive] = useState(false);
   const [data, setData] = useState();
-
+  console.log(state);
   const handleInputs = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
