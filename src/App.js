@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Dropdown from "./Dropdown";
 
@@ -16,7 +16,6 @@ const App = () => {
   const [disable, setDisable] = useState(true);
   const [active, setActive] = useState(false);
   const [data, setData] = useState();
-  console.log(state);
   const handleInputs = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
@@ -169,7 +168,7 @@ const App = () => {
           className="btn"
           disabled={disable}
           style={
-            disable
+            disable || data?.data === "success"
               ? { cursor: "not-allowed", opacity: "0.5" }
               : { cursor: "pointer" }
           }
