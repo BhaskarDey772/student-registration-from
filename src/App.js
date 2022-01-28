@@ -75,6 +75,7 @@ const App = () => {
         <input
           type="text"
           name="name"
+          pattern="[a-z,A-Z]"
           value={state.name}
           onChange={handleInputs}
           onKeyUp={isEmpty}
